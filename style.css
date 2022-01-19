@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    transition: all 2s ease-in-out;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.container {
+    width: 1000px;
+    height: 1000px;
+    background-color: #afafaf;
+    position: relative;
+    transition: all 2s ease-in-out;
+}
+
+/* Body Parts */
+
+.BP {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    transform-origin: bottom center;
+}
+
+.neck {
+    border: 1px solid black;
+    width: 30px;
+    height: 50px;
+    border-radius: 25%;
+
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    transform-origin: bottom center;
+}
+
+.body {
+    border: 1px solid black;
+    width: 150px;
+    height: 300px;
+
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: bottom center;
+    transition: all 2s ease-in-out;
+}
+
+/* General */
+
+.arms {
+    border: 1px solid black;
+    width: 50px;
+    height: 300px;
+
+    position: absolute;
+    top: 0%;
+    transform-origin: top center;
+    transform: rotate(45deg);
+    transition: all 2s ease-in-out;
+}
+
+.topArm {
+    border: 1px solid black;
+    width: 50%;
+    height: 50%;
+
+    position: absolute;
+    top: 0%;
+    transform-origin: top center;
+}
+
+.lowerArm {
+    border: 1px solid black;
+    width: 50%;
+    height: 50%;
+
+    position: absolute;
+    top: 50%;
+    transform-origin: top center;
+    transform: rotate(-45deg);
+    transition: all 2s ease-in-out;
+}
+
+.hands {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 100%;
+    transform-origin: top center;
+}
+
+.legs {
+    border: 1px solid black;
+    width: 75px;
+    height: 300px;
+
+    position: absolute;
+    top: 100%;
+    transform-origin: top center;
+    transition: all 2s ease-in-out;
+}
+
+.topLeg {
+    border: 1px solid black;
+    width: 50%;
+    height: 50%;
+
+    position: absolute;
+    top: 0%;
+    transform-origin: top center;
+}
+
+.lowerLeg {
+    border: 1px solid black;
+    width: 50%;
+    height: 50%;
+
+    position: absolute;
+    top: 50%;
+    transform-origin: top center;
+    transform: rotate(45deg);
+}
+
+.foots {
+    border: 1px solid black;
+    width: 75px;
+    height: 50px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 100%;
+    transform-origin: top center;
+}
+
+.artic {
+    border: 1px solid red;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10%;
+}
+
+.articCenter {
+    border: 1px solid blue;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+}
+
+/* Particular */
+
+/* Arms */
+.leftArm {
+    left: 0%;
+    transform: translateX(-50%);
+}
+
+.rightArm {
+    right: 0%;
+    transform: translateX(50%);
+}
+
+/* Hands  */
+.leftHand {
+    left: -50%;
+}
+
+.rightHand {
+    right: -50%;
+}
+
+/* Legs */
+.leftLeg {
+    left: 50%;
+    transform: rotate(-45deg);
+}
+
+.rightLeg {
+    right: 50%;
+    transform: rotate(45deg);
+}
+
+/* Foots */
+.leftFoot {
+    left: -50%;
+}
+
+.rightFoot {
+    right: -50%;
+}
+
+/* Artics */
+
+.articLA {
+    width: 50px;
+    height: 50px;
+}
+.articRA {
+    width: 50px;
+    height: 50px;
+}
+.articLL {
+    width: 75px;
+    height: 75px;
+}
+.articRL {
+    width: 75px;
+    height: 75px;
+}
