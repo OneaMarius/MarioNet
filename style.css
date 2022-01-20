@@ -11,231 +11,423 @@ body {
     height: 100vh;
 }
 
-.container {
-    width: 1000px;
-    height: 1000px;
+.marioNet {
+    width: 90vmin;
+    height: 90vmin;
     background-color: #afafaf;
     position: relative;
-    transition: all 2s ease-in-out;
+    z-index: 0;
 }
 
 /* Body Parts */
 
-.BP {
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
+.bigBP {
+    /* border: 1px solid green; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.head {
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-100%);
-    transform-origin: bottom center;
-}
-
-.neck {
-    border: 1px solid black;
-    width: 30px;
-    height: 50px;
-    border-radius: 25%;
-
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-100%);
-    transform-origin: bottom center;
+.BP {
+    /* border: 1px solid rgb(24, 26, 17); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .body {
-    border: 1px solid black;
-    width: 150px;
-    height: 300px;
+    width: 15%;
+    height: 30%;
 
     position: absolute;
     top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 42.5%;
+}
+
+.topBody {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: -100%;
+    left: 0%;
     transform-origin: bottom center;
-    transition: all 2s ease-in-out;
+
+    background-image: url(./pictures/topBody.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    z-index: 20;
+}
+
+.lowerBody {
+    width: 100%;
+    height: 50%;
+
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    transform-origin: bottom center;
+
+    background-image: url(./pictures/lowerBody.png);
+    background-position: center;
+    background-size: 120% 135%;
+    background-repeat: no-repeat;
 }
 
 /* General */
 
-.arms {
-    border: 1px solid black;
-    width: 50px;
-    height: 300px;
+.head {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 50%; */
 
     position: absolute;
-    top: 0%;
+    top: -95%;
+    left: 5%;
+    transform-origin: bottom center;
+
+    background-image: url(./pictures/head.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.neck {
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -10%;
+    left: 35%;
+    transform-origin: bottom center;
+
+    background-image: url(./pictures/neck.png);
+    background-position: center;
+    background-size: 200% 280%;
+    background-repeat: no-repeat;
+
+    z-index: -60;
+}
+
+.arms {
+    width: 33%;
+    height: 200%;
+
+    position: absolute;
+    top: 20%;
     transform-origin: top center;
-    transform: rotate(45deg);
-    transition: all 2s ease-in-out;
 }
 
 .topArm {
-    border: 1px solid black;
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: 40%;
 
     position: absolute;
     top: 0%;
     transform-origin: top center;
+
+    z-index: -30;
 }
 
 .lowerArm {
-    border: 1px solid black;
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 120%;
 
     position: absolute;
-    top: 50%;
+    top: 100%;
     transform-origin: top center;
-    transform: rotate(-45deg);
-    transition: all 2s ease-in-out;
 }
 
 .hands {
-    border: 1px solid black;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 200%;
+    height: 50%;
+    /* border-radius: 50%; */
 
     position: absolute;
     top: 100%;
     transform-origin: top center;
+    z-index: 32;
 }
 
 .legs {
-    border: 1px solid black;
-    width: 75px;
-    height: 300px;
+    width: 50%;
+    height: 200%;
 
     position: absolute;
     top: 100%;
     transform-origin: top center;
-    transition: all 2s ease-in-out;
 }
 
 .topLeg {
-    border: 1px solid black;
-    width: 50%;
+    width: 100%;
     height: 50%;
 
     position: absolute;
     top: 0%;
     transform-origin: top center;
+    z-index: -1;
 }
 
 .lowerLeg {
-    border: 1px solid black;
-    width: 50%;
-    height: 50%;
-
-    position: absolute;
-    top: 50%;
-    transform-origin: top center;
-    transform: rotate(45deg);
-}
-
-.foots {
-    border: 1px solid black;
-    width: 75px;
-    height: 50px;
-    border-radius: 50%;
+    width: 75%;
+    height: 100%;
 
     position: absolute;
     top: 100%;
     transform-origin: top center;
 }
 
-.artic {
-    border: 1px solid red;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.foots {
+    width: 150%;
+    height: 50%;
+    /* border-radius: 50%; */
+
     position: absolute;
-    top: -10%;
+    top: 100%;
+    transform-origin: top center;
 }
 
-.articCenter {
-    border: 1px solid blue;
-    width: 50px;
-    height: 50px;
+.articArm {
+    /* border: 1px solid red;
+    background-color: black; */
     border-radius: 50%;
     position: absolute;
-    bottom: 0%;
-    left: 50%;
-    transform: translateX(-50%) translateY(50%);
+    transform-origin: center;
+    z-index: -20;
+
+    background-image: url(./pictures/TAR.png);
+    background-position: center;
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+}
+
+.articLeg {
+    /* border: 1px solid red;
+    background-color: black; */
+    border-radius: 50%;
+    position: absolute;
+    transform-origin: center;
+    z-index: -20;
+
+    background-image: url(./pictures/TLR.png);
+    background-position: center;
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+}
+
+.articCenterArm {
+    /* border: 1px solid blue; */
+    width: 3vmin;
+    height: 3vmin;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10%;
+    left: 0%;
+
+    background-image: url(./pictures/TAR.png);
+    background-position: center;
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+}
+
+.articCenterLeg {
+    /* border: 1px solid blue; */
+    width: 5vmin;
+    height: 5vmin;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -15%;
+    left: 15%;
+
+    background-image: url(./pictures/TLR.png);
+    background-position: center;
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+}
+
+.articBody {
+    /* border: 1px solid rgb(16, 16, 22); */
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 50%;
+    left: 0%;
+
+    background-image: url(./pictures/topBody.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    z-index: -40;
+}
+
+.articFoot {
+    /* border: 1px solid blue; */
+    width: 3vmin;
+    height: 3vmin;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10%;
+    left: 20%;
+
+    background-image: url(./pictures/TLR.png);
+    background-position: center;
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+
+    /* z-index: -70; */
+}
+
+.articHand {
+    /* border: 1px solid blue; */
+    width: 2vmin;
+    height: 2vmin;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10%;
+    left: 20%;
+
+    background-image: url(./pictures/handL.png);
+    background-position: top;
+    background-size: 400% 400%;
+    background-repeat: no-repeat;
 }
 
 /* Particular */
 
 /* Arms */
 .leftArm {
-    left: 0%;
-    transform: translateX(-50%);
+    left: -25%;
 }
 
 .rightArm {
-    right: 0%;
-    transform: translateX(50%);
+    right: -25%;
 }
 
 /* Hands  */
 .leftHand {
     left: -50%;
+    background-image: url(./pictures/handL.png);
+    background-position: center;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
 }
 
 .rightHand {
     right: -50%;
+    background-image: url(./pictures/handR.png);
+    background-position: center;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
 }
 
 /* Legs */
 .leftLeg {
-    left: 50%;
-    transform: rotate(-45deg);
+    left: 0%;
 }
 
 .rightLeg {
-    right: 50%;
-    transform: rotate(45deg);
+    right: 0%;
 }
 
 /* Foots */
 .leftFoot {
-    left: -50%;
+    left: -25%;
+    background-image: url(./pictures/footL.png);
+    background-position: top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .rightFoot {
-    right: -50%;
+    right: -25%;
+    background-image: url(./pictures/footR.png);
+    background-position: center;
+    background-size: 100% 120%;
+    background-repeat: no-repeat;
 }
 
 /* Artics */
 
 .articLA {
-    width: 50px;
-    height: 50px;
+    top: -5%;
+    width: 4vmin;
+    height: 4vmin;
 }
 .articRA {
-    width: 50px;
-    height: 50px;
+    top: -5%;
+    width: 4vmin;
+    height: 4vmin;
 }
 .articLL {
-    width: 75px;
-    height: 75px;
+    top: -10%;
+    width: 100%;
+    height: 20%;
 }
 .articRL {
-    width: 75px;
-    height: 75px;
+    top: -10%;
+    width: 100%;
+    height: 20%;
+}
+
+/*Lower Leg Right*/
+.LLR {
+    background-image: url(./pictures/LLR.png);
+    background-position: center;
+    background-size: 90% 120%;
+    background-repeat: no-repeat;
+}
+/*Lower Leg Left*/
+.LLL {
+    background-image: url(./pictures/LLL.png);
+    background-position: center;
+    background-size: 90% 120%;
+    background-repeat: no-repeat;
+}
+/*Lower Arm Right*/
+.LAR {
+    background-image: url(./pictures/LAR.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+/*Lower Arm Left*/
+.LAL {
+    background-image: url(./pictures/LAL.png);
+    background-position: center;
+    background-size: 90% 100%;
+    background-repeat: no-repeat;
+}
+
+/*Top Leg Right*/
+.TLR {
+    background-image: url(./pictures/TLR.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+/*Top Leg Left*/
+.TLL {
+    background-image: url(./pictures/TLL.png);
+    background-position: center;
+    background-size: 90% 100%;
+    background-repeat: no-repeat;
+}
+/*Top Arm Right*/
+.TAR {
+    background-image: url(./pictures/TAR.png);
+    background-position: center;
+    background-size: 100% 125%;
+    background-repeat: no-repeat;
+}
+/*Top Arm Left*/
+.TAL {
+    background-image: url(./pictures/TAL.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
