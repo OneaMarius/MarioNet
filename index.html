@@ -1,69 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styleMarioNet.css" />
-        <script src="scriptMarioNet.js" defer></script>
-        <title>MarioNet</title>
-    </head>
-    <body>
-        <div class="marioNet">
-            <div class="bigBP body">
-                <div class="BP lowerBody">
-                    <div class="BP topBody">
-                        <div class="BP head"></div>
-                        <div class="BP neck"></div>
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="styleMarioNet.css" />
+      <script src="scriptMarioNet.js" defer></script>
+      <title>MarioNet</title>
+   </head>
+   <body>
+      <div class="marioNet">
+         <div class="articBody artBody"></div>
 
-                        <div class="bigBP arms leftArm">
-                            <div class="articArm articLA"></div>
-                            <div class="BP topArm TAL">
-                                <div class="articCenterArm"></div>
-                                <div class="BP lowerArm LAL">
-                                    <div class="articHand"></div>
-                                    <div class="BP hands leftHand"></div>
-                                </div>
-                            </div>
-                        </div>
+         <div class="BP lowerBody" id="LowBody">
+            <div class="BP topBody" id="TopBody">
+               <div class="articHead" id="artHead"></div>
+               <div class="BP head" id="Head"></div>
 
-                        <div class="bigBP arms rightArm">
-                            <div class="articArm articRA"></div>
-                            <div class="BP topArm TAR">
-                                <div class="articCenterArm"></div>
-                                <div class="BP lowerArm LAR">
-                                    <div class="articHand"></div>
-                                    <div class="BP hands rightHand"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+               <div class="articArm articAL artTopArm"></div>
+               <div class="BP topArm TAL" id="TopArmLeft">
+                  <div class="articCenterArm artMidArm"></div>
+                  <div class="BP lowerArm LAL" id="LowArmLeft">
+                     <div class="articHand artLowArm"></div>
+                     <div class="BP hands leftHand" id="HandLeft"></div>
+                  </div>
+               </div>
 
-                    <div class="articBody"></div>
-
-                    <div class="bigBP legs leftLeg">
-                        <div class="articLeg articLL"></div>
-                        <div class="BP topLeg TLL">
-                            <div class="articCenterLeg"></div>
-                            <div class="BP lowerLeg LLL">
-                                <div class="articFoot"></div>
-                                <div class="BP foots leftFoot"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bigBP legs rightLeg">
-                        <div class="articLeg articRL"></div>
-                        <div class="BP topLeg TLR">
-                            <div class="articCenterLeg"></div>
-                            <div class="BP lowerLeg LLR">
-                                <div class="articFoot"></div>
-                                <div class="BP foots rightFoot"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               <div class="articArm articAR artTopArm"></div>
+               <div class="BP topArm TAR" id="TopArmRight">
+                  <div class="articCenterArm artMidArm"></div>
+                  <div class="BP lowerArm LAR" id="LowArmRight">
+                     <div class="articHand artLowArm"></div>
+                     <div class="BP hands rightHand" id="HandRight"></div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </body>
+
+            <div class="articLeg articLL artTopLeg"></div>
+            <div class="BP topLeg TLL" id="TopLegLeft">
+               <div class="articCenterLeg artMidLeg"></div>
+               <div class="BP lowerLeg LLL" id="LowLegLeft">
+                  <div class="articFoot artLowLeg"></div>
+                  <div class="BP foots leftFoot" id="FootLeft"></div>
+               </div>
+            </div>
+
+            <div class="articLeg articLR artTopLeg"></div>
+            <div class="BP topLeg TLR" id="TopLegRight">
+               <div class="articCenterLeg artMidLeg"></div>
+               <div class="BP lowerLeg LLR" id="LowLegRight">
+                  <div class="articFoot artLowLeg"></div>
+                  <div class="BP foots rightFoot" id="FootRight"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
 </html>

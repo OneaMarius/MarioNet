@@ -1,167 +1,40 @@
-const elements = document.querySelectorAll(".BP");
+const e_LB = document.getElementById("LowBody");
+const e_TB = document.getElementById("TopBody");
+const e_H = document.getElementById("Head");
+const e_TAL = document.getElementById("TopArmLeft");
+const e_LAL = document.getElementById("LowArmLeft");
+const e_HL = document.getElementById("HandLeft");
+const e_TAR = document.getElementById("TopArmRight");
+const e_LAR = document.getElementById("LowArmRight");
+const e_HR = document.getElementById("HandRight");
+const e_TLL = document.getElementById("TopLegLeft");
+const e_LLL = document.getElementById("LowLegLeft");
+const e_FL = document.getElementById("FootLeft");
+const e_TLR = document.getElementById("TopLegRight");
+const e_LLR = document.getElementById("LowLegRight");
+const e_FR = document.getElementById("FootRight");
 
-elements.forEach((elem) => {
-    elem.addEventListener("click", (e) => {
-        rotateRightFn(e.target);
-    });
-
-    elem.addEventListener("contextmenu", (e) => {
-        e.preventDefault();
-        rotateLeftFn(e.target);
-    });
+e_LB.addEventListener("click", (e) => {
+   rotateL45(e.target);
+   console.log(e.target);
 });
 
-function rotateLeftFn() {
+e_LB.addEventListener("contextmenu", (e) => {
+   e.preventDefault();
+   rotateR45(e.target);
+});
+
+function rotateR45() {
     const elementArr = [...arguments];
     elementArr.forEach((arg) => {
-        arg.style.transform = arg.style.transform + "rotate(45deg)";
+       arg.style.transform = arg.style.transform + "rotate(45deg)";
     });
-}
-
-function rotateRightFn() {
+ }
+ 
+ function rotateL45() {
     const elementArr = [...arguments];
     elementArr.forEach((arg) => {
-        arg.style.transform = arg.style.transform + "rotate(-45deg)";
+       arg.style.transform = arg.style.transform + "rotate(-45deg)";
     });
-}
-
-function rotate180() {
-    const elementArr = [...arguments];
-    elementArr.forEach((arg) => {
-        arg.style.transform = arg.style.transform + "rotate(180deg)";
-    });
-}
-
-console.log(elements);
-
-// rotateRightFn(
-//     elements[],
-//     elements[],
-//     elements[],
-//     elements[],
-//     elements[],
-//     elements[],
-//     elements[]
-// );
-// rotateLeftFn(
-//     elements[],
-//     elements[],
-//     elements[],
-//     elements[],
-//     elements[],
-//     elements[],
-//     elements[]
-// );
-
-//  Elements:
-// 2: head
-// 3: neck
-// 1: topBody
-// 0: lowerBody
-// 4: topArm.TAL  LEFT
-// 7: topArm.TAR   RIGHT
-// 5: lowerArm.LAL  LEFT
-// 8: lowerArm.LAR   RIGHT
-// 6: hands.leftHand   LEFT
-// 9: hands.rightHand   RIGHT
-// 10: topLeg.TLL    LEFT
-// 13: topLeg.TLR    RIGHT
-// 11: lowerLeg.LLL   LEFT
-// 14: lowerLeg.LLR    RIGHT
-// 12: foots.leftFoot   LEFT
-// 15: foots.rightFoot   RIGHT
-
-rotateLeftFn(
-    elements[10],
-    elements[14],
-    elements[4],
-    elements[4],
-    elements[6],
-    elements[6]
-);
-rotateRightFn(
-    elements[13],
-    elements[11],
-    elements[7],
-    elements[7],
-    elements[9],
-    elements[9]
-    // elements[]
-);
-
-setTimeout(
-    () =>
-        rotateLeftFn(
-            elements[1],
-            elements[12],
-            elements[11],
-            elements[4],
-            elements[4],
-            elements[8],
-            elements[8],
-            elements[2]
-        ),
-    2000
-);
-setTimeout(
-    () =>
-        rotateRightFn(
-            elements[1],
-            elements[12],
-            elements[11],
-            elements[4],
-            elements[4],
-            elements[8],
-            elements[8],
-            elements[2]
-        ),
-    4000
-);
-setTimeout(
-    () =>
-        rotateRightFn(
-            elements[1],
-            elements[15],
-            elements[14],
-            elements[7],
-            elements[7],
-            elements[5],
-            elements[5],
-            elements[2]
-        ),
-    6000
-);
-
-setTimeout(
-    () =>
-        rotateLeftFn(
-            elements[1],
-            elements[15],
-            elements[14],
-            elements[7],
-            elements[7],
-            elements[5],
-            elements[5],
-            elements[2]
-        ),
-    8000
-);
-setTimeout(() => {
-    rotateRightFn(
-        elements[10],
-        elements[14],
-        elements[4],
-        elements[4],
-        elements[6],
-        elements[6]
-    );
-    rotateLeftFn(
-        elements[13],
-        elements[11],
-        elements[7],
-        elements[7],
-        elements[9],
-        elements[9]
-    );
-    rotate180(elements[0], elements[0]);
-}, 10000);
+ }
+ 
