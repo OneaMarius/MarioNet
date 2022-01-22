@@ -1,6 +1,5 @@
 * {
    box-sizing: border-box;
-   transition: all 2s ease-in-out;
 }
 
 body {
@@ -16,6 +15,65 @@ body {
    height: 90vmin;
    background-color: #afafaf;
    position: relative;
+   transition: none;
+}
+
+#instruction {
+   position: absolute;
+   right: 0px;
+   top: 0px;
+   margin-right: 5%;
+   font-weight: bold;
+}
+
+#options_marioNet {
+   width: 25%;
+   display: flex;
+   flex-direction: column;
+}
+
+#options_marioNet .option {
+   width: 100%;
+   background-color: #9f9f9f;
+   border: 1px solid black;
+   display: flex;
+   justify-content: space-between;
+}
+
+#options_marioNet label {
+   font-weight: bold;
+   padding-left: 10px;
+}
+
+@media (max-width:700px) {
+   #options_marioNet .option {
+      width: 60px;
+   }
+   #options_marioNet label {
+      display: none;
+   }
+   #instruction {
+      display: none;
+   }
+}
+
+@media (max-height:700px) {
+   #options_marioNet .option {
+      width: 60px;
+   }
+   #options_marioNet label {
+      display: none;
+   }
+   #instruction {
+      display: none;
+   }
+}
+
+#degrees,
+#speed,
+#jump {
+   width: 60px;
+   /* background-color: transparent; */
 }
 
 .BP {
@@ -38,10 +96,11 @@ body {
    top: -200%;
    left: 0%;
    transform-origin: bottom center;
+   border-radius: 25px;
 }
 
 .lowerBody {
-   background-color: chocolate;
+   background-color: yellow;
    width: 12%;
    height: 12%;
    border-bottom-left-radius: 25px;
@@ -92,7 +151,7 @@ body {
 }
 
 .hands {
-   background-color: darkslategrey;
+   background-color: forestgreen;
    width: 180%;
    height: 40%;
    border-top-left-radius: 25px;
@@ -227,7 +286,7 @@ body {
    left: 0%;
 }
 
-.articBody {
+/* .articBody {
    background-color: gold;
    width: 12%;
    height: 12%;
@@ -235,6 +294,18 @@ body {
    position: absolute;
    top: 44%;
    left: 44%;
+} */
+
+.articBody {
+   position: absolute;
+   transform: translate(-50%, -50%);
+   height: 50%;
+   width: 100%;
+   border-radius: 150px 150px 0 0;
+   background-color: black;
+   top: -25%;
+   left: 50%;
+   border: 1px solid black;
 }
 
 .articFoot {
