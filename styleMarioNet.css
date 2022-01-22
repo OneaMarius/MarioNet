@@ -73,7 +73,6 @@ body {
 #speed,
 #jump {
    width: 60px;
-   /* background-color: transparent; */
 }
 
 .BP {
@@ -81,6 +80,7 @@ body {
    display: flex;
    align-items: center;
    justify-content: center;
+   cursor: pointer;
 }
 
 /*//////////// Body Parts ////////////*/
