@@ -48,29 +48,6 @@ body {
    padding-left: 10px;
 }
 
-@media (max-width:700px) {
-   #options_marioNet .option {
-      width: 60px;
-   }
-   #options_marioNet label {
-      display: none;
-   }
-   #instruction {
-      display: none;
-   }
-}
-
-@media (max-height:700px) {
-   #options_marioNet .option {
-      width: 60px;
-   }
-   #options_marioNet label {
-      display: none;
-   }
-   #instruction {
-      display: none;
-   }
-}
 
 #degrees,
 #speed,
@@ -130,6 +107,7 @@ body {
    transform-origin: bottom center;
 
    font-weight: bold;
+   font-size: 1rem;
 }
 
 .topArm {
@@ -488,4 +466,35 @@ body {
    background-position: center;
    background-size: 100% 100%;
    background-repeat: no-repeat;
+}
+
+
+@media (max-width:700px) {
+   #options_marioNet .option {
+      width: 60px;
+   }
+   #options_marioNet label {
+      display: none;
+   }
+   #instruction {
+      display: none;
+   }
+   .head {
+      font-size: 0.5rem;
+   }
+}
+
+@media (max-height:700px) {
+   #options_marioNet .option {
+      width: 60px;
+   }
+   #options_marioNet label {
+      display: none;
+   }
+   #instruction {
+      display: none;
+   }
+   .head {
+      font-size: 0.5rem;
+   }
 }
