@@ -115,6 +115,11 @@ input::-webkit-inner-spin-button {
     justify-content: center;
 }
 
+.marioNet #autoPlay:focus,
+.marioNet #autoPlay:active {
+    outline: none;
+}
+
 .marioNet #speedCtrl {
     position: absolute;
     left: 50%;
@@ -150,7 +155,8 @@ input::-webkit-inner-spin-button {
     border: none;
     text-align: center;
 }
-.marioNet #speed:focus {
+.marioNet #speed:focus,
+.marioNet #speed:active {
     outline: none;
 }
 
