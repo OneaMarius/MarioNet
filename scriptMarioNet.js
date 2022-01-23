@@ -31,12 +31,18 @@ let poseString = "resetAll();";
 let replayPose = "resetAll();";
 let PoseObj = {};
 let degrees = 45;
-let transformTimer = 1000;
+let transformTimer = 700;
 let DanceInterval;
 let arrayIndex = 0;
 let lastRandom = 0;
 let autoPlay = false;
 AutoPlayBtn.style.backgroundColor = 'green';
+const music = new Audio('./music/dm.mp3');
+music.loop =true;
+music.playbackRate = transformTimer/1000;
+
+// music.play();
+// music.pause();
 
 bodyParts1 = [LowBody.id, TopBody.id, Head.id];
 bodyParts2 = [
@@ -93,18 +99,25 @@ LowBody.addEventListener("contextmenu", (e) => {
 });
 
 function changeSpeed() {
+    music.playbackRate = 700/transformTimer;
    allBP.forEach((element) => {
       element.style.transition = `all ${transformTimer}ms ease-in-out`;
    });
    clearInterval(DanceInterval);
    if (autoPlay) {
       DanceInterval = setInterval(() => {
-         let random = Math.floor(Math.random()*arr.length);
-         while (random === lastRandom) {
-         random = Math.floor(Math.random()*arr.length);
-         } 
-         arr[random]();
-         lastRandom = random;
+          randomDance();
+          // => Random dance code
+
+
+        //  let random = Math.floor(Math.random()*arr.length);
+        //  while (random === lastRandom) {
+        //  random = Math.floor(Math.random()*arr.length);
+        //  } 
+        //  arr[random]();
+        //  lastRandom = random;
+
+
          // arr[arrayIndex]();
          // arrayIndex++;
          // if (arrayIndex == arr.length) {
@@ -176,23 +189,26 @@ replay.addEventListener("click", () => {
 AutoPlayBtn.addEventListener('click', () => {
    if (autoPlay) {
       autoPlay = false;
+      music.pause();
       AutoPlayBtn.innerText = 'Start';
       AutoPlayBtn.style.backgroundColor = 'green';
    } else {
       autoPlay = true;
+      music.play();
       AutoPlayBtn.innerText = 'Stop';
       AutoPlayBtn.style.backgroundColor = 'red';
    }
    changeSpeed();
 })
 
-Poses.forEach((pose, i) => {
-   pose.addEventListener("click", () => {
-      arr[i]();
-   });
-});
 
-///////////// POSES /////////////////
+///////////// Pose-Move - Dance /////////////////
+Poses.forEach((pose, i) => {
+    pose.addEventListener("click", () => {
+       arr[i]();
+    });
+ });
+
 const arr = [Post1, Post2,Post3, Post4,Post5, Post6,Post7, Post8,Post9, Post10];
 
 function PlayLastPose() {
@@ -237,3 +253,27 @@ function Post10() {
 
 
 changeSpeed();
+
+// /////////////////////////// Random Dance ////////////////////////////////
+function randomDance() {
+    resetAll();
+    Ro(RandomBP(), RandomDegree());
+    Ro(RandomBP(), RandomDegree());
+    Ro(RandomBP(), RandomDegree());
+    Ro(RandomBP(), RandomDegree());
+    Ro(RandomBP(), RandomDegree());
+}
+
+function RandomBP() {
+    const randBP = allBP[Math.floor(Math.random()*allBP.length)];
+    console.log(randBP.id);
+    return randBP;
+}
+
+function RandomDegree() {
+    const randDeg =   Math.floor(Math.random()*720 - 360);
+    console.log(randDeg);
+    return randDeg;
+
+}
+

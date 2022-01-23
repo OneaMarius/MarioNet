@@ -23,8 +23,8 @@
    <body>
       <div class="marioNet">
          <div id="instruction">
-            <p>LMB - move left</p>
-            <p>RMB - move right</p>
+            <span>LMB - move left</span>
+            <span>RMB - move right</span>
          </div>
          <div id="menu" class="active">
             <div id="options_marioNet">
@@ -45,10 +45,10 @@
                      <option value="180">180</option>
                   </select>
                </div>
-               <div class="option">
+               <!-- <div class="option">
                   <label for="speed">Set Speed</label>
-                  <input type="number" id="speed" step="100" value="1000" />
-               </div>
+                  <input type="number" id="speed" step="100" min="200" value="700" />
+               </div> -->
                <div class="option">
                   <label for="jump">Jump</label>
                   <button id="jump">Jump</button>
@@ -66,11 +66,11 @@
                   <label for="replay">Replay Last Save</label>
                   <button id="replay">Replay</button>
                </div>
-               <div class="option">
+               <!-- <div class="option">
                   <label for="autoPlay">Auto Play Mode</label>
                   <button id="autoPlay">Start</button>
-               </div>
-               <!-- <div class="option">
+               </div> -->
+               <div class="option">
                   <label for="Pose1">Pose 1</label>
                   <button id="Pose1" class="Pose">Play</button>
                </div>
@@ -109,7 +109,7 @@
                <div class="option">
                   <label for="Pose10">Pose 10</label>
                   <button id="Pose10" class="Pose">Play</button>
-               </div> -->
+               </div>
             </div>
             <button id="menuBtn"><i class="fas fa-bars"></i></button>
          </div>
@@ -120,14 +120,25 @@
             <div class="articBody artBody art" id="artBody"></div>
             <div class="BP topBody" id="TopBody">
                <div class="articHead art" id="artHead"></div>
-               <div class="BP head" id="Head"></div>
+               <div class="BP head" id="Head">
+                
+                <i class="fas fa-eye" id="leftEye"></i>
+                <i class="fas fa-eye" id="rightEye"></i>
+                <!-- <i class="fas fa-check" id="mouth"></i> -->
+                <div id="mouth">D</div>
+                
+               </div>
 
                <div class="articArm articAL artTopArm art"></div>
                <div class="BP topArm TAL" id="TopArmLeft">
                   <div class="articCenterArm artMidArm art"></div>
                   <div class="BP lowerArm LAL" id="LowArmLeft">
                      <div class="articHand artLowArm art"></div>
-                     <div class="BP hands leftHand" id="HandLeft"></div>
+                     <div class="BP hands leftHand" id="HandLeft">
+                         <div class="fingers"></div>
+                         <div class="fingers"></div>
+                         <div class="fingers"></div>
+                     </div>
                   </div>
                </div>
 
@@ -136,7 +147,11 @@
                   <div class="articCenterArm artMidArm art"></div>
                   <div class="BP lowerArm LAR" id="LowArmRight">
                      <div class="articHand artLowArm art"></div>
-                     <div class="BP hands rightHand" id="HandRight"></div>
+                     <div class="BP hands rightHand" id="HandRight">
+                        <div class="fingers"></div>
+                        <div class="fingers"></div>
+                        <div class="fingers"></div>
+                     </div>
                   </div>
                </div>
             </div>
@@ -159,6 +174,9 @@
                </div>
             </div>
          </div>
+         <button id="autoPlay">Start</button>
+        <input type="number" id="speed" step="100" min="200" value="700" />
+
       </div>
    </body>
 </html>

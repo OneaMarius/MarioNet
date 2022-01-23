@@ -1,539 +1,607 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 * {
-   box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   overflow: hidden;
-   height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    background-color: black;
+    background-image: radial-gradient(black, green, black, green);
 }
 
 .marioNet {
-   width: 90vmin;
-   height: 90vmin;
-   background-color: #afafaf;
-   position: relative;
-   transition: none;
-   font-family: 'Roboto', sans-serif;
+    width: 90vmin;
+    height: 90vmin;
+    background-color: #afafaf;
+    background-image: url(/pictures/bg.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: none;
+    font-family: "Roboto", sans-serif;
+    border-radius: 25px;
 }
 
 #instruction {
-   position: absolute;
-   right: 0px;
-   top: 0px;
-   margin-right: 5%;
-   font-weight: bold;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin-right: 1%;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px black;
+    display: flex;
+    flex-direction: column;
 }
 
-.marioNet #menu{
-   position: absolute;
-   left: 0px;
-   top: 0px;
-   max-width: 30%;
-   display: flex;
+.marioNet #menu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    max-width: 30%;
+    display: flex;
 }
 .marioNet #menu i.fa-bars {
-   font-size: 2rem;
+    font-size: 2rem;
 }
 
 #menuBtn {
-   height: fit-content;
-   width: fit-content;
-   cursor: pointer;
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
 }
 
 #menuBtn:hover {
- transform: scale(1.1);
+    transform: scale(1.1);
 }
-
-
 
 #options_marioNet {
-   width: 80%;
-   display: flex;
-   flex-direction: column;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
 }
 
-#menu.active #options_marioNet{
-   display: none;
+#menu.active #options_marioNet {
+    display: none;
 }
 
 #options_marioNet .option {
-   width: 100%;
-   background-color: #9f9f9f;
-   border: 1px solid black;
-   display: flex;
-   justify-content: space-between;
+    width: 100%;
+    background-color: #9f9f9f;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
 }
 
 #options_marioNet label {
-   font-weight: bold;
-   padding-left: 10px;
+    font-weight: bold;
+    padding-left: 10px;
 }
 
+#options_marioNet .option button,
+#degrees,
+#speed {
+    width: 60px;
+    font-family: "Roboto", sans-serif;
+}
 
- #options_marioNet .option button, #degrees, #speed{
-   width: 60px;
-   font-family: 'Roboto', sans-serif;
+.marioNet #autoPlay {
+    position: absolute;
+    right: calc(50% - 1.25rem);
+    top: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 2px 2px 2px black;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.marioNet #speed {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    width: 6ch;
+    height: 1.5rem;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
 }
 
 .BP {
-   background-color: black;
-   border: 1px solid black;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   cursor: pointer;
+    background-color: black;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 /*//////////// Body Parts ////////////*/
 
 .topBody {
-   
-   width: 100%;
-   height: 200%;
-   border-top-left-radius: 25px;
-   border-top-right-radius: 25px;
+    width: 100%;
+    height: 200%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 
-   position: absolute;
-   top: -200%;
-   left: 0%;
-   transform-origin: bottom center;
-   border-radius: 25px;
+    position: absolute;
+    top: -200%;
+    left: 0%;
+    transform-origin: bottom center;
+    border-radius: 25px;
 }
 
 .lowerBody {
-  
-   width: 12%;
-   height: 12%;
-   border-bottom-left-radius: 25px;
-   border-bottom-right-radius: 25px;
+    width: 12%;
+    height: 12%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 
-   position: absolute;
-   top: 50%;
-   left: 44%;
-   transform-origin: top center;
+    position: absolute;
+    top: 50%;
+    left: 44%;
+    transform-origin: top center;
 }
 
 /* General */
 
+.fa-eye {
+    font-size: 200%;
+    /* color: blue; */
+    position: absolute;
+    top: 25%;
+    /* text-shadow: 2px 2px 1px black; */
+}
+
+#leftEye {
+    left: 5%;
+    /* color: red; */
+}
+#rightEye {
+    right: 5%;
+    /* color: blue; */
+}
+
+#mouth {
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    transform: rotate(75deg);
+    font-size: 150%;
+    /* color: red; */
+}
+
 .head {
-   
-   width: 100%;
-   height: 50%;
-   border-radius: 50%;
+    width: 100%;
+    height: 50%;
+    border-radius: 50%;
 
-   position: absolute;
-   top: -50%;
-   left: 0%;
-   transform-origin: bottom center;
+    position: absolute;
+    top: -50%;
+    left: 0%;
+    transform-origin: bottom center;
 
-   font-weight: bold;
-   font-size: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 .topArm {
-   
-   width: 30%;
-   height: 50%;
-   border-top-left-radius: 25px;
-   border-top-right-radius: 25px;
+    width: 30%;
+    height: 50%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 
-   position: absolute;
-   top: 12.5%;
-   transform-origin: top center;
+    position: absolute;
+    top: 12.5%;
+    transform-origin: top center;
 }
 
 .lowerArm {
-   
-   width: 100%;
-   height: 120%;
-   border-top-left-radius: 25px;
-   border-top-right-radius: 25px;
+    width: 100%;
+    height: 120%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 
-   position: absolute;
-   top: 100%;
-   transform-origin: top center;
+    position: absolute;
+    top: 100%;
+    transform-origin: top center;
 }
 
 .hands {
-   
-   width: 180%;
-   height: 40%;
-   border-top-left-radius: 25px;
-   border-top-right-radius: 25px;
+    width: 180%;
+    height: 35%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 
-   position: absolute;
-   top: 100%;
-   transform-origin: top center;
+    position: absolute;
+    top: 100%;
+    transform-origin: top center;
+
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .topLeg {
-   
-   width: 40%;
-   height: 150%;
-   border-top-left-radius: 25px;
-   border-top-right-radius: 25px;
-   position: absolute;
-   transform-origin: top center;
-   top: 75%;
+    width: 40%;
+    height: 150%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    position: absolute;
+    transform-origin: top center;
+    top: 75%;
 }
 
 .lowerLeg {
-   
-   width: 80%;
-   height: 100%;
-   border-top-left-radius: 25px;
-   border-top-right-radius: 25px;
+    width: 80%;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 
-   position: absolute;
-   top: 100%;
-   transform-origin: top center;
+    position: absolute;
+    top: 100%;
+    transform-origin: top center;
 }
 
 .foots {
-   
-   width: 150%;
-   height: 35%;
-   border-top-left-radius: 25px;
-   border-top-right-radius: 25px;
+    width: 250%;
+    height: 25%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom: 3px solid red;
 
-   position: absolute;
-   top: 100%;
-   transform-origin: top center;
+    position: absolute;
+    top: 85%;
+}
+
+.fingers {
+    width: 15%;
+    height: 60%;
+    background-color: black;
+    position: relative;
+    margin-top: 45%;
+    border-radius: 50px;
 }
 
 /*Top Leg Right*/
 .TLR {
-   right: 5%;
+    right: 5%;
 }
 /*Top Leg Left*/
 .TLL {
-   left: 5%;
+    left: 5%;
 }
 /*Top Arm Right*/
 .TAR {
-   right: -40%;
+    right: -40%;
 }
 /*Top Arm Left*/
 .TAL {
-   left: -40%;
+    left: -40%;
 }
 
 /* Hands  */
 .leftHand {
-   left: -40%;
+    left: -40%;
 }
 
 .rightHand {
-   right: -40%;
+    right: -40%;
 }
 
 /* Foots */
 .leftFoot {
-   left: -25%;
+    transform-origin: 75% 50%;
+    left: -150%;
 }
 
 .rightFoot {
-   right: -25%;
+    transform-origin: 25% 50%;
+    right: -150%;
 }
 
 /*//////////////// Artics //////////////////////////*/
 
 .articHead {
-   
-   width: 40%;
-   height: 20%;
-   border-radius: 50%;
+    width: 40%;
+    height: 20%;
+    border-radius: 50%;
 
-   position: absolute;
-   top: -10%;
-   left: 30%;
-   transform-origin: bottom center;
+    position: absolute;
+    top: -10%;
+    left: 30%;
+    transform-origin: bottom center;
 }
 
 .articArm {
-   border-radius: 50%;
-   position: absolute;
-   transform-origin: center;
-   top: 0%;
-   width: 50%;
-   height: 25%;
+    border-radius: 50%;
+    position: absolute;
+    transform-origin: center;
+    top: 0%;
+    width: 50%;
+    height: 25%;
 }
 
 .articLeg {
-   border-radius: 50%;
-   position: absolute;
-   transform-origin: center;
-   top: 50%;
-   width: 50%;
-   height: 50%;
+    border-radius: 50%;
+    position: absolute;
+    transform-origin: center;
+    top: 50%;
+    width: 50%;
+    height: 50%;
 }
 
 .articCenterArm {
-   
-   width: 100%;
-   height: 30%;
-   border-radius: 50%;
-   position: absolute;
-   bottom: -15%;
-   left: 0%;
+    width: 100%;
+    height: 30%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -15%;
+    left: 0%;
 }
 
 .articCenterLeg {
-   
-   width: 100%;
-   height: 26%;
-   border-radius: 50%;
-   position: absolute;
-   bottom: -13%;
-   left: 0%;
+    width: 100%;
+    height: 26%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -13%;
+    left: 0%;
 }
 
-
-
 .articBody {
-   position: absolute;
-   transform: translate(-50%, -50%);
-   height: 50%;
-   width: 100%;
-   border-radius: 150px 150px 0 0;
-   
-   top: -25%;
-   left: 50%;
-   
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 100%;
+    border-radius: 150px 150px 0 0;
+
+    top: -25%;
+    left: 50%;
 }
 
 .articFoot {
-   
-   width: 100%;
-   height: 20%;
-   border-radius: 50%;
-   position: absolute;
-   bottom: -10%;
-   left: 0%;
+    width: 100%;
+    height: 20%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10%;
+    left: 0%;
 }
 
 .articHand {
-   
-   width: 100%;
-   height: 22%;
-   border-radius: 50%;
-   position: absolute;
-   bottom: -10%;
-   left: 0%;
+    width: 100%;
+    height: 22%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10%;
+    left: 0%;
 }
 
 .articAL {
-   left: -50%;
+    left: -50%;
 }
 .articAR {
-   right: -50%;
+    right: -50%;
 }
 .articLL {
-   left: 0%;
+    left: 0%;
 }
 .articLR {
-   right: 0%;
+    right: 0%;
 }
 
 /* ////////////////  Dress Body Parts ////////////////// */
 
 #LowBody {
-   /* background-image: url(./pictures/lowerBody.png); */
-   background-color:turquoise;
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/lowerBody.png); */
+    background-color: black;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 #TopBody {
-   /* background-image: url(./pictures/topBody.png); */
-   background-color:yellow;
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/topBody.png); */
+    background-color: yellow;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 #Head {
-   /* background-image: url(./pictures/head.png); */
-   background-color:white;
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/head.png); */
+    background-color: white;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 #TopArmLeft {
-   /* background-image: url(./pictures/TAL.png); */
-   background-color:violet;
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/TAL.png); */
+    background-color: violet;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 #LowArmLeft {
-   /* background-image: url(./pictures/LAL.png); */
-   background-color:teal;
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/LAL.png); */
+    background-color: aqua;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 #HandLeft {
-   /* background-image: url(./pictures/handL.png); */
-   background-color:tomato;
-   background-position: center;
-   background-size: 70% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/handL.png); */
+    background-color: #f3f3f3;
+    background-position: center;
+    background-size: 70% 100%;
+    background-repeat: no-repeat;
 }
 #TopArmRight {
-   /* background-image: url(./pictures/TAR.png); */
-   background-color: violet;
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/TAR.png); */
+    background-color: violet;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 #LowArmRight {
-   /* background-image: url(./pictures/TAR.png); */
-   background-color: teal;
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/TAR.png); */
+    background-color: aqua;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 #HandRight {
-   /* background-image: url(./pictures/handR.png); */
-   background-color: tomato;
-   background-position: center;
-   background-size: 70% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/handR.png); */
+    background-color: #f3f3f3;
+    background-position: center;
+    background-size: 70% 100%;
+    background-repeat: no-repeat;
 }
 #TopLegLeft {
-   /* background-image: url(./pictures/TLL.png); */
-   background-color:steelblue;
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/TLL.png); */
+    background-color: #1d42f7;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 #LowLegLeft {
-   /* background-image: url(./pictures/LLL.png); */
-   background-color:springgreen;
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/LLL.png); */
+    background-color: springgreen;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 #FootLeft {
-   /* background-image: url(./pictures/footL.png); */
-   background-color:slateblue;
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/footL.png); */
+    background-color: white;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 #TopLegRight {
-   /* background-image: url(./pictures/TLR.png); */
-   background-color: steelblue;
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/TLR.png); */
+    background-color: #1d42f7;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 #LowLegRight {
-   /* background-image: url(./pictures/LLR.png); */
-   background-color: springgreen;
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/LLR.png); */
+    background-color: springgreen;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 #FootRight {
-   /* background-image: url(./pictures/footR.png); */
-   background-color: slateblue;
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/footR.png); */
+    background-color: white;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 #artHead {
-   /* background-image: url(./pictures/TAL.png); */
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/TAL.png); */
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .artBody {
-   /* background-image: url(./pictures/TAL.png); */
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/TAL.png); */
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 .artTopArm {
-   /* background-image: url(./pictures/TAL.png); */
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/TAL.png); */
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 .artMidArm {
-   /* background-image: url(./pictures/TAL.png); */
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/TAL.png); */
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 .artLowArm {
-   /* background-image: url(./pictures/TAL.png); */
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/TAL.png); */
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 .artTopLeg {
-   /* background-image: url(./pictures/TAL.png); */
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/TAL.png); */
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 .artMidLeg {
-   /* background-image: url(./pictures/TAL.png); */
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/TAL.png); */
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 .artLowLeg {
-   /* background-image: url(./pictures/TAL.png); */
-   background-position: center;
-   background-size: 100% 100%;
-   background-repeat: no-repeat;
+    /* background-image: url(./pictures/TAL.png); */
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
-.marioNet .art{
-   background-color: red;
-   border: 1px solid black;
-   /* background-color: transparent;
+.marioNet .art {
+    background-color: black;
+    border: 1px solid black;
+    /* background-color: transparent;
    border: 1px solid black; */
-   /* background-color: transparent;
+    /* background-color: transparent;
    border: none; */
 }
 
-@media (max-width:700px) {
-   #options_marioNet .option {
-      width: 60px;
-   }
-   #options_marioNet label {
-      display: none;
-   }
-   #instruction {
-      display: none;
-   }
-   .head {
-      font-size: 0.5rem;
-   }
+@media (max-width: 700px) {
+    #options_marioNet .option {
+        width: 60px;
+    }
+    #options_marioNet label {
+        display: none;
+    }
+    #instruction {
+        display: none;
+    }
+    .head {
+        font-size: 0.5rem;
+    }
+    .marioNet #autoPlay {
+        top: 0%;
+        right: 0%;
+    }
 }
 
-@media (max-height:700px) {
-   #options_marioNet .option {
-      width: 60px;
-   }
-   #options_marioNet label {
-      display: none;
-   }
-   #instruction {
-      display: none;
-   }
-   .head {
-      font-size: 0.5rem;
-   }
+@media (max-height: 700px) {
+    #options_marioNet .option {
+        width: 60px;
+    }
+    #options_marioNet label {
+        display: none;
+    }
+    #instruction {
+        display: none;
+    }
+    .head {
+        font-size: 0.5rem;
+    }
+    .marioNet #autoPlay {
+        top: 0%;
+        right: 0%;
+    }
 }
