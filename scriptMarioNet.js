@@ -63,10 +63,13 @@ bodyParts2 = [
 ];
 
 speedDown.addEventListener('click',()=>{
+    if (selectSpeed.value > 299) {
     selectSpeed.value = +selectSpeed.value - 100;
     transformTimer = selectSpeed.value;
     changeSpeed();
+    }
 })
+
 speedUp.addEventListener('click',()=>{
     selectSpeed.value = +selectSpeed.value + 100;
     transformTimer = selectSpeed.value;
