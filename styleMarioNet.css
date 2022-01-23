@@ -115,8 +115,7 @@ input::-webkit-inner-spin-button {
     justify-content: center;
 }
 
-.marioNet #autoPlay:focus,
-.marioNet #autoPlay:active {
+.marioNet #autoPlay:focus {
     outline: none;
 }
 
@@ -155,8 +154,7 @@ input::-webkit-inner-spin-button {
     border: none;
     text-align: center;
 }
-.marioNet #speed:focus,
-.marioNet #speed:active {
+.marioNet #speed:focus {
     outline: none;
 }
 
