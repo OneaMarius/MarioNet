@@ -1,182 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link
-         rel="shortcut icon"
-         href="./pictures/favicon.PNG"
-         type="image/x-icon"
-      />
-      <link rel="stylesheet" href="styleMarioNet.css" />
-      <link
-         rel="stylesheet"
-         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
-         integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
-         crossorigin="anonymous"
-         referrerpolicy="no-referrer"
-      />
-      <script src="scriptMarioNet.js" defer></script>
-      <title>MarioNet</title>
-   </head>
-   <body>
-      <div class="marioNet">
-         <div id="instruction">
-            <span>LMB - move left</span>
-            <span>RMB - move right</span>
-         </div>
-         <div id="menu" class="active">
-            <div id="options_marioNet">
-               <div class="option">
-                  <label for="degrees">Set Degrees</label>
-                  <select name="degrees" id="degrees">
-                     <option value="15">15</option>
-                     <option value="30">30</option>
-                     <option value="45" selected>45</option>
-                     <option value="60">60</option>
-                     <option value="75">75</option>
-                     <option value="90">90</option>
-                     <option value="105">105</option>
-                     <option value="120">120</option>
-                     <option value="135">135</option>
-                     <option value="150">150</option>
-                     <option value="165">165</option>
-                     <option value="180">180</option>
-                  </select>
-               </div>
-               <!-- <div class="option">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="./pictures/favicon.PNG"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="styleMarioNet.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+            integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script src="scriptMarioNet.js" defer></script>
+        <title>MarioNet</title>
+    </head>
+    <body>
+        <div class="marioNet">
+            <div id="instruction">
+                <span>LMB - move left</span>
+                <span>RMB - move right</span>
+            </div>
+            <div id="menu" class="active">
+                <div id="options_marioNet">
+                    <div class="option">
+                        <label for="degrees">Set Degrees</label>
+                        <select name="degrees" id="degrees">
+                            <option value="15">15</option>
+                            <option value="30">30</option>
+                            <option value="45" selected>45</option>
+                            <option value="60">60</option>
+                            <option value="75">75</option>
+                            <option value="90">90</option>
+                            <option value="105">105</option>
+                            <option value="120">120</option>
+                            <option value="135">135</option>
+                            <option value="150">150</option>
+                            <option value="165">165</option>
+                            <option value="180">180</option>
+                        </select>
+                    </div>
+                    <!-- <div class="option">
                   <label for="speed">Set Speed</label>
                   <input type="number" id="speed" step="100" min="200" value="700" />
                </div> -->
-               <div class="option">
-                  <label for="jump">Jump</label>
-                  <button id="jump">Jump</button>
-               </div>
-               <div class="option">
-                  <label for="reset">Reset</label>
-                  <button id="reset">Reset</button>
-               </div>
-               <div class="option">
-                  <label for="createPose">Save Pose</label>
-                  <button id="createPose">Save</button>
-               </div>
+                    <div class="option">
+                        <label for="jump">Jump</label>
+                        <button id="jump">Jump</button>
+                    </div>
+                    <div class="option">
+                        <label for="reset">Reset</label>
+                        <button id="reset">Reset</button>
+                    </div>
+                    <div class="option">
+                        <label for="createPose">Save Pose</label>
+                        <button id="createPose">Save</button>
+                    </div>
 
-               <div class="option">
-                  <label for="replay">Replay Last Save</label>
-                  <button id="replay">Replay</button>
-               </div>
-               <!-- <div class="option">
+                    <div class="option">
+                        <label for="replay">Replay Last Save</label>
+                        <button id="replay">Replay</button>
+                    </div>
+                    <!-- <div class="option">
                   <label for="autoPlay">Auto Play Mode</label>
                   <button id="autoPlay">Start</button>
                </div> -->
-               <div class="option">
-                  <label for="Pose1">Pose 1</label>
-                  <button id="Pose1" class="Pose">Play</button>
-               </div>
-               <div class="option">
-                  <label for="Pose2">Pose 2</label>
-                  <button id="Pose2" class="Pose">Play</button>
-               </div>
-               <div class="option">
-                  <label for="Pose3">Pose 3</label>
-                  <button id="Pose3" class="Pose">Play</button>
-               </div>
-               <div class="option">
-                  <label for="Pose4">Pose 4</label>
-                  <button id="Pose4" class="Pose">Play</button>
-               </div>
-               <div class="option">
-                  <label for="Pose5">Pose 5</label>
-                  <button id="Pose5" class="Pose">Play</button>
-               </div>
-               <div class="option">
-                  <label for="Pose6">Pose 6</label>
-                  <button id="Pose6" class="Pose">Play</button>
-               </div>
-               <div class="option">
-                  <label for="Pose7">Pose 7</label>
-                  <button id="Pose7" class="Pose">Play</button>
-               </div>
-               <div class="option">
-                  <label for="Pose8">Pose 8</label>
-                  <button id="Pose8" class="Pose">Play</button>
-               </div>
-               <div class="option">
-                  <label for="Pose9">Pose 9</label>
-                  <button id="Pose9" class="Pose">Play</button>
-               </div>
-               <div class="option">
-                  <label for="Pose10">Pose 10</label>
-                  <button id="Pose10" class="Pose">Play</button>
-               </div>
-            </div>
-            <button id="menuBtn"><i class="fas fa-bars"></i></button>
-         </div>
-
-         <!-- <div class="BP articBody artBody" id="artBody"></div> -->
-
-         <div class="BP lowerBody" id="LowBody">
-            <div class="articBody artBody art" id="artBody"></div>
-            <div class="BP topBody" id="TopBody">
-               <div class="articHead art" id="artHead"></div>
-               <div class="BP head" id="Head">
-                
-                <i class="fas fa-eye" id="leftEye"></i>
-                <i class="fas fa-eye" id="rightEye"></i>
-                <!-- <i class="fas fa-check" id="mouth"></i> -->
-                <div id="mouth">D</div>
-                
-               </div>
-
-               <div class="articArm articAL artTopArm art"></div>
-               <div class="BP topArm TAL" id="TopArmLeft">
-                  <div class="articCenterArm artMidArm art"></div>
-                  <div class="BP lowerArm LAL" id="LowArmLeft">
-                     <div class="articHand artLowArm art"></div>
-                     <div class="BP hands leftHand" id="HandLeft">
-                         <div class="fingers"></div>
-                         <div class="fingers"></div>
-                         <div class="fingers"></div>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="articArm articAR artTopArm art"></div>
-               <div class="BP topArm TAR" id="TopArmRight">
-                  <div class="articCenterArm artMidArm art"></div>
-                  <div class="BP lowerArm LAR" id="LowArmRight">
-                     <div class="articHand artLowArm art"></div>
-                     <div class="BP hands rightHand" id="HandRight">
-                        <div class="fingers"></div>
-                        <div class="fingers"></div>
-                        <div class="fingers"></div>
-                     </div>
-                  </div>
-               </div>
+                    <div class="option">
+                        <label for="Pose1">Pose 1</label>
+                        <button id="Pose1" class="Pose">Play</button>
+                    </div>
+                    <div class="option">
+                        <label for="Pose2">Pose 2</label>
+                        <button id="Pose2" class="Pose">Play</button>
+                    </div>
+                    <div class="option">
+                        <label for="Pose3">Pose 3</label>
+                        <button id="Pose3" class="Pose">Play</button>
+                    </div>
+                    <div class="option">
+                        <label for="Pose4">Pose 4</label>
+                        <button id="Pose4" class="Pose">Play</button>
+                    </div>
+                    <div class="option">
+                        <label for="Pose5">Pose 5</label>
+                        <button id="Pose5" class="Pose">Play</button>
+                    </div>
+                    <div class="option">
+                        <label for="Pose6">Pose 6</label>
+                        <button id="Pose6" class="Pose">Play</button>
+                    </div>
+                    <div class="option">
+                        <label for="Pose7">Pose 7</label>
+                        <button id="Pose7" class="Pose">Play</button>
+                    </div>
+                    <div class="option">
+                        <label for="Pose8">Pose 8</label>
+                        <button id="Pose8" class="Pose">Play</button>
+                    </div>
+                    <div class="option">
+                        <label for="Pose9">Pose 9</label>
+                        <button id="Pose9" class="Pose">Play</button>
+                    </div>
+                    <div class="option">
+                        <label for="Pose10">Pose 10</label>
+                        <button id="Pose10" class="Pose">Play</button>
+                    </div>
+                </div>
+                <button id="menuBtn"><i class="fas fa-bars"></i></button>
             </div>
 
-            <div class="articLeg articLL artTopLeg art"></div>
-            <div class="BP topLeg TLL" id="TopLegLeft">
-               <div class="articCenterLeg artMidLeg art"></div>
-               <div class="BP lowerLeg LLL" id="LowLegLeft">
-                  <div class="articFoot artLowLeg art"></div>
-                  <div class="BP foots leftFoot" id="FootLeft"></div>
-               </div>
-            </div>
+            <!-- <div class="BP articBody artBody" id="artBody"></div> -->
 
-            <div class="articLeg articLR artTopLeg art"></div>
-            <div class="BP topLeg TLR" id="TopLegRight">
-               <div class="articCenterLeg artMidLeg art"></div>
-               <div class="BP lowerLeg LLR" id="LowLegRight">
-                  <div class="articFoot artLowLeg art"></div>
-                  <div class="BP foots rightFoot" id="FootRight"></div>
-               </div>
-            </div>
-         </div>
-         <button id="autoPlay">Start</button>
-        <input type="number" id="speed" step="100" min="200" value="700" />
+            <div class="BP lowerBody" id="LowBody">
+                <div class="articBody artBody art" id="artBody"></div>
+                <div class="BP topBody" id="TopBody">
+                    <div class="articHead art" id="artHead"></div>
+                    <div class="BP head" id="Head">
+                        <i class="fas fa-eye" id="leftEye"></i>
+                        <i class="fas fa-eye" id="rightEye"></i>
+                        <!-- <i class="fas fa-check" id="mouth"></i> -->
+                        <div id="mouth">D</div>
+                    </div>
 
-      </div>
-   </body>
+                    <div class="articArm articAL artTopArm art"></div>
+                    <div class="BP topArm TAL" id="TopArmLeft">
+                        <div class="articCenterArm artMidArm art"></div>
+                        <div class="BP lowerArm LAL" id="LowArmLeft">
+                            <div class="articHand artLowArm art"></div>
+                            <div class="BP hands leftHand" id="HandLeft">
+                                <div class="fingers"></div>
+                                <div class="fingers"></div>
+                                <div class="fingers"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="articArm articAR artTopArm art"></div>
+                    <div class="BP topArm TAR" id="TopArmRight">
+                        <div class="articCenterArm artMidArm art"></div>
+                        <div class="BP lowerArm LAR" id="LowArmRight">
+                            <div class="articHand artLowArm art"></div>
+                            <div class="BP hands rightHand" id="HandRight">
+                                <div class="fingers"></div>
+                                <div class="fingers"></div>
+                                <div class="fingers"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="articLeg articLL artTopLeg art"></div>
+                <div class="BP topLeg TLL" id="TopLegLeft">
+                    <div class="articCenterLeg artMidLeg art"></div>
+                    <div class="BP lowerLeg LLL" id="LowLegLeft">
+                        <div class="articFoot artLowLeg art"></div>
+                        <div class="BP foots leftFoot" id="FootLeft"></div>
+                    </div>
+                </div>
+
+                <div class="articLeg articLR artTopLeg art"></div>
+                <div class="BP topLeg TLR" id="TopLegRight">
+                    <div class="articCenterLeg artMidLeg art"></div>
+                    <div class="BP lowerLeg LLR" id="LowLegRight">
+                        <div class="articFoot artLowLeg art"></div>
+                        <div class="BP foots rightFoot" id="FootRight"></div>
+                    </div>
+                </div>
+            </div>
+            <button id="autoPlay">Start</button>
+            <div id="speedCtrl">
+                <button class="speedBtn" id="speedDown"><i class="fas fa-minus-square spctrl"></i></button>
+                <input
+                    type="number"
+                    id="speed"
+                    step="100"
+                    min="200"
+                    value="700"
+                />
+                <div id="backdropSpeed"></div>
+                <button class="speedBtn" id="speedUp"><i class="fas fa-plus-square spctrl"></i></button>
+            </div>
+        </div>
+    </body>
 </html>

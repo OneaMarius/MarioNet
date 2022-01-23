@@ -17,6 +17,8 @@ const FootRight = document.getElementById("FootRight");
 
 const menuBtn = document.getElementById('menuBtn');
 const menu = document.getElementById('menu');
+const speedUp = document.getElementById('speedUp');
+const speedDown = document.getElementById('speedDown');
 
 const selectDeg = document.getElementById("degrees");
 const selectSpeed = document.getElementById("speed");
@@ -59,6 +61,17 @@ bodyParts2 = [
    LowLegRight.id,
    FootRight.id,
 ];
+
+speedDown.addEventListener('click',()=>{
+    selectSpeed.value = +selectSpeed.value - 100;
+    transformTimer = selectSpeed.value;
+    changeSpeed();
+})
+speedUp.addEventListener('click',()=>{
+    selectSpeed.value = +selectSpeed.value + 100;
+    transformTimer = selectSpeed.value;
+    changeSpeed();
+})
 
 menuBtn.addEventListener('click',()=>{
     menu.classList.toggle('active');
