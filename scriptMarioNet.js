@@ -273,22 +273,27 @@ changeSpeed();
 // /////////////////////////// Random Dance ////////////////////////////////
 function randomDance() {
     resetAll();
-    Ro(RandomBP(), RandomDegree());
-    Ro(RandomBP(), RandomDegree());
-    Ro(RandomBP(), RandomDegree());
-    Ro(RandomBP(), RandomDegree());
-    Ro(RandomBP(), RandomDegree());
+    Ro(Head, RandomDegree(180));
+    Ro(RandomBP(), RandomDegree(720));
+    Ro(RandomBP(), RandomDegree(720));
+    Ro(RandomBP(), RandomDegree(360));
+    Ro(RandomBP(), RandomDegree(360));
+    Ro(RandomBP(), RandomDegree(180));
 }
 
 function RandomBP() {
     const randBP = allBP[Math.floor(Math.random()*allBP.length)];
-    console.log(randBP.id);
+    if (randBP == Head) {
+      //  console.log('HEADdddddddddddddddddddddddddddddddddd');
+       return RandomBP();
+    }
+   //  console.log(randBP.id);
     return randBP;
 }
 
-function RandomDegree() {
-    const randDeg =   Math.floor(Math.random()*720 - 360);
-    console.log(randDeg);
+function RandomDegree(x) {
+    const randDeg =   Math.floor(Math.random()*x - x/2);
+   //  console.log(randDeg);
     return randDeg;
 
 }
